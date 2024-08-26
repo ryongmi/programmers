@@ -1,64 +1,86 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title> Main </title>
-        <style>
-            h1 {
-                text-align: center;
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <title>Main</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
 
-            #txt_welcome {
-                text-align: center; 
-                margin-bottom: 50px;
-            }
+      #txt_welcome {
+        text-align: center;
+        margin-bottom: 50px;
+      }
 
-            .card {
-                text-align: center;
-            }
+      .card {
+        text-align: center;
+      }
 
-            .card_title {
-                font-size: 20px;
-            }
+      .card_title {
+        font-size: 20px;
+      }
 
-            .card_button {
-                font-size: 25px;
-                width: 150px;
-                height: 30px;
-            }
+      .card_button {
+        font-size: 25px;
+        width: 150px;
+        /* height: 30px; */
+        border-radius: 10px;
+        background-color: rgb(231, 231, 231);
+      }
 
-            .card_img {
-                width: 300px;
-                height: 300px;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Tennis market</h1>
-        <div id="txt_welcome">
-            Welcome to Tennis market! <br>
-            Enjoy your shopping.
-            <br>
-            <br>
-            <a href="./orderlist"> order list </a>
-        </div>
-        <div style="display:grid; grid-template-columns: 1fr 1fr 1fr;">
-            <div class="card">
-                <img class="card_img" src="./img/redRacket.png">
-                <p class="card_title"> Red Racket </p>
-                <input class="card_button" type="button" value="order" 
-                    onclick="location.href='/order?productId=1'">
-            </div>
-            <div class="card">
-                <img class="card_img" src="./img/blueRacket.png">
-                <p class="card_title"> Blue Racket </p>
-                <input class="card_button" type="button" value="order" onclick="alert(2);">
-            </div>
-            <div class="card">
-                <img class="card_img" src="./img/blackRacket.png">
-                <p class="card_title"> Black Racket </p>
-                <input class="card_button" type="button" value="order" onclick="alert(3);">
-            </div>
-        </div>
-    </body>
+      .card_button:hover {
+        color: white;
+        background-color: rgb(190, 190, 190);
+      }
+
+      .card_img {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>로스트아크 유용 사이트</h1>
+    <div id="txt_welcome">
+      8.23일 강의에서 실습한 프로젝트 기반으로 작성한 페이지입니다. <br />
+      간단하게 어떤걸 만들까 고민하다 제가 하고 있는 게임에 관련된 유용한 사이트
+      링크가 있는 페이지를 만들게 되었습니다.
+      <br />
+      <br />
+      <!-- <a href="./orderlist"> order list </a> -->
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr">
+      <div class="card">
+        <img class="card_img" src="./img/inven.png" />
+        <p class="card_title">LostArk Inven</p>
+        <input
+          class="card_button"
+          type="button"
+          value="이동"
+          onclick="location.href='https://lostark.inven.co.kr'"
+        />
+      </div>
+      <div class="card">
+        <img class="card_img" src="./img/icepeng.png" />
+        <p class="card_title">Ice Peng</p>
+        <input
+          class="card_button"
+          type="button"
+          value="이동"
+          onclick="location.href='https://loa.icepeng.com'"
+        />
+      </div>
+      <div class="card">
+        <img class="card_img" src="./img/chohago.png" />
+        <p class="card_title">Cho Hago</p>
+        <input
+          class="card_button"
+          type="button"
+          value="이동"
+          onclick="location.href='https://cho.elphago.work'"
+        />
+      </div>
+    </div>
+  </body>
 </html>

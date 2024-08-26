@@ -16,27 +16,27 @@ const main = (response) => {
   response.end();
 };
 
-const redRacket = (response) => {
-  console.log("redRacket");
-  fs.readFile("./img/redRacket.png", (err, data) => {
+const inven = (response) => {
+  console.log("inven");
+  fs.readFile("./img/inven.png", (err, data) => {
     response.writeHead(200, { "Content-Type": "text/html" });
     response.write(data);
     response.end();
   });
 };
 
-const blueRacket = (response) => {
-  console.log("blueRacket");
-  fs.readFile("./img/blueRacket.png", (err, data) => {
+const icepeng = (response) => {
+  console.log("icepeng");
+  fs.readFile("./img/icepeng.png", (err, data) => {
     response.writeHead(200, { "Content-Type": "text/html" });
     response.write(data);
     response.end();
   });
 };
 
-const blackRacket = (response) => {
-  console.log("blackRacket");
-  fs.readFile("./img/blackRacket.png", (err, data) => {
+const chohago = (response) => {
+  console.log("chohago");
+  fs.readFile("./img/chohago.png", (err, data) => {
     response.writeHead(200, { "Content-Type": "text/html" });
     response.write(data);
     response.end();
@@ -94,8 +94,8 @@ handle["/"] = main;
 handle["/order"] = order;
 handle["/orderlist"] = orderlist;
 
-handle["/img/redRacket.png"] = redRacket;
-handle["/img/blueRacket.png"] = blueRacket;
-handle["/img/blackRacket.png"] = blackRacket;
+handle["/img/inven.png"] = inven;
+handle["/img/icepeng.png"] = icepeng;
+handle["/img/chohago.png"] = chohago;
 
 exports.handle = handle;
