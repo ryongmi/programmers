@@ -7,13 +7,13 @@ const db = new Map();
 let id = 1;
 
 const notFoundChannel = (res) => {
-  res.status(404).json({ message: "채널 정보를 찾을 수 없습니다" });
+  return res.status(404).json({ message: "채널 정보를 찾을 수 없습니다" });
 };
 
 const validator = (req, res, next) => {
   const err = validationResult(req);
   if (!err.isEmpty()) {
-    return res.status(400).json({ message: err.array[0].msg });
+    return res.status(400).json({ message: err.array().at(0).msg });
   }
   next();
 };
@@ -21,7 +21,7 @@ const validator = (req, res, next) => {
 route
   .route("/")
   .get(
-    body("userId").notEmpty().isInt().withMessage("숫자를 입력해주세요."),
+    body("userId").notEmpty().isNumeric().withMessage("숫자를 입력해주세요."),
     validator,
     (req, res) => {
       const { userId } = req.body;

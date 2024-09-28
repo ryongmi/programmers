@@ -4,6 +4,7 @@ const app = express();
 const channelRouter = require("./routes/channels");
 const userRouter = require("./routes/users");
 
+app.use();
 app.use(express.json());
 
 app.use("/", userRouter);
